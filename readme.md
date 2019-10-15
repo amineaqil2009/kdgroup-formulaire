@@ -1,4 +1,10 @@
-# Laravel PHP Framework
+Mini test technique sous laravel (Formulaire)
+Formulaire sous Laravel  5.2
+1 - configurez la base de donnée depuis le fichier .env.
+2 - Utilisez la commande php artisan migrate pour creer  la table dans la base de données.
+3 - Changez la configuration SMTP par la votre pour bien envoyer le message à l'adresse de destination depuis le fichier .env, et sur le fichier mail.php (facultatif)
+4 - Utilisez la commande php artisan serve pour démarrer le mini projet.
+
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
