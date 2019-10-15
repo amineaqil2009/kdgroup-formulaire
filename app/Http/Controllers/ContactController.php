@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
+use App\Http\Requests\ContactRequest;
 use App\Message;
 
 use Mail;
@@ -20,8 +19,7 @@ class ContactController extends Controller
 
 
 
-    public function store(Request $request)
-
+    public function store(ContactRequest $request)
     {
 
     	$message = new Message;
@@ -30,16 +28,6 @@ class ContactController extends Controller
 		$message->email = $request->email;
     	$message->description = $request->description;
     	$message->save();
-
-
-    	$this->validate($request, [
-
-    		'sujet' => 'required',
-    		'email' => 'required|email',
-    		'description' => 'required|max:200'
-    			
-    	]);
-        
 
     	Mail::send('email.message',[
     		'msg' => $request->description
