@@ -32,7 +32,7 @@ class ContactController extends Controller
     		'msg' => $message->description
     	], function ($mail) use($message){
     		$mail->from($message->email);
-    		$mail->to('amine.aqil2009@gmail.com')->subject($message->sujet);
+    		$mail->to('olivia.declerck@dkgroup.fr')->subject($message->sujet);
     	});
 
     	return redirect()->back()->with('flash_message', 'Votre message a bien été envoyé');
